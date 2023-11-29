@@ -21,6 +21,8 @@ we have added two database functions.
 --> another to delete all the saved previous calculations from the database.  
 -->Model view view model(MVVM) is used.  
 
+Video Link : https://youtu.be/qJDlElzjzxI  
+
 
 Calculation in the calculator
 ![image](https://github.com/Wichita-State-CS797R/cs797r-project4-palle_mekala_mamidala/assets/95466492/c307dccf-186f-4dbc-bf37-30c8314afe50)
@@ -34,4 +36,5 @@ Saved previous calculations display in the CalcHistoryPage
 ![image](https://github.com/Wichita-State-CS797R/cs797r-project4-palle_mekala_mamidala/assets/95466492/872ed635-7eb8-4be0-8725-0fad4bc73dba)
 
 After clicking on the "Clear All Calculations" button.
-![image](https://github.com/Wichita-State-CS797R/cs797r-project4-palle_mekala_mamidala/assets/95466492/18fd97d4-a73c-4334-b608-0bda4a8bdbac)
+![image](https://github.com/Wichita-State-CS797R/cs797r-project4-palle_mekala_mamidala/assets/95466492/18fd97d4-a73c-4334-b608-0bda4a8bdbac)  
+
