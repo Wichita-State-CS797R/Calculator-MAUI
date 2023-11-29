@@ -41,6 +41,14 @@ namespace Calculator
             return await Database.Table<CalcHistoryModel>().ToListAsync();
         }
 
+        //public async Task<List<CalcHistoryModel>> GetItemsNotDoneAsync()
+        //{
+        //    await Init();
+        //    return await Database.Table<CalcHistoryModel>().Where(t => t.Done).ToListAsync();
+
+        //    // SQL queries are also possible
+        //    //return await Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+        //}
         public async Task DeleteItemsAsync()
         {
             await Database.DeleteAllAsync<CalcHistoryModel>();

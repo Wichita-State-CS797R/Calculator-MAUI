@@ -4,10 +4,13 @@ namespace Calculator;
 public partial class MainPage : ContentPage
 {
     
-    public MainPage()
+    public MainPage(CalcHistoryDatabase CalcHistoryDB, CalcHistoryModel CHM, CalcHistoryPage CHP)
     {
         InitializeComponent();
         OnClear(this, null);
+        database = CalcHistoryDB;
+        calchistorypage = CHP;
+        BindingContext = CHM;
 
     }
 
@@ -16,6 +19,10 @@ public partial class MainPage : ContentPage
     string mathOperator;
     double firstNumber, secondNumber;
     string decimalFormat = "N0";
+    CalcHistoryDatabase database;
+    //CalcHistoryModel calchistorymodel;
+    //CalcHistoryHelper calchistoryhelper;
+    CalcHistoryPage calchistorypage;
     
 
     void OnSelectNumber(object sender, EventArgs e)
@@ -97,6 +104,12 @@ public partial class MainPage : ContentPage
             secondNumber = 0;
             currentState = -1;
             currentEntry = string.Empty;
+            var x = new CalcHistoryModel
+            {
+                CurrentCalculation = $"Equation: {this.CurrentCalculation.Text} | Solution: {this.resultText.Text}"
+            };
+            await database.SaveItemAsync(x);
+            calchistorypage.getAllCalculations();
 
         }
     }    

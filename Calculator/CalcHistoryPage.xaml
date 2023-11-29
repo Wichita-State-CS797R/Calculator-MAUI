@@ -5,5 +5,15 @@
              Title="CalcHistoryPage"
              xmlns:local="clr-namespace:Calculator">
     <VerticalStackLayout>
+        <ListView x:Name="CalsHistory">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Margin="10" FontSize="25" TextColor="White" Text="{Binding CurrentCalculation}"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button BackgroundColor="Black" MaximumWidthRequest="400" CornerRadius="8" Text="Clear all calculations" Clicked="deleteCalculations" />
     </VerticalStackLayout>
 </ContentPage>
